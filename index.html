@@ -7,7 +7,7 @@
   <link href="style.css" rel="stylesheet" />
 </head>
 <body>
-  <!-- Landing Page -->
+  <!-- Header -->
   <header class="site-header">
     <div class="brand">Entrepreneur Path Finder</div>
     <nav class="site-nav">
@@ -24,28 +24,68 @@
         <div class="hero-copy">
           <h1>Discover Your True Entrepreneurial Self</h1>
           <p class="lead">
-            This journey helps you discover or validate your entrepreneurial identity—then turns it into an actionable plan.
+            This journey helps you discover, rediscover, or validate your entrepreneurial identity—then turns it into an actionable plan.
           </p>
           <div class="hero-cta">
             <button class="primary lg" onclick="goTo('welcome')">Begin Journey</button>
           </div>
+          <div class="hero-points">
+            <div class="point">🔎 Self-Discovery Quiz (15 Qs)</div>
+            <div class="point">🧭 Personalized Archetype Profile</div>
+            <div class="point">🗺️ 6-Month Execution Roadmap</div>
+          </div>
         </div>
+
         <div class="hero-gallery">
-          <img src="https://imgur.com/up79xiM.png" alt="Landing visual" />
+          <!-- Clean Unsplash images (not screenshots) -->
+          <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1200&auto=format&fit=crop" alt="Team brainstorming" />
+          <img src="https://images.unsplash.com/photo-1529336953121-ad5a0d43d0f1?q=80&w=1200&auto=format&fit=crop" alt="Founder pitching idea" />
+          <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop" alt="Focused work" />
         </div>
       </div>
+
+      <!-- How It Works (restored) -->
+      <section class="how-it-works">
+        <h2>How It Works</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <h3>Take the Quiz</h3>
+            <p>Answer a short, tailored set of questions (15) that match your background and experience.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-num">2</div>
+            <h3>Meet Your Archetype</h3>
+            <p>Receive a clear profile explaining your strengths, blind spots, and how you naturally create value.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-num">3</div>
+            <h3>Choose a Path</h3>
+            <p>Explore 3 suggested startup or career paths matched to your profile and background.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-num">4</div>
+            <h3>Execute the Roadmap</h3>
+            <p>Get a practical 6-month roadmap with milestones, learning goals, and success metrics.</p>
+          </div>
+        </div>
+      </section>
     </section>
 
-    <!-- Welcome Page -->
+    <!-- Welcome Page (background quick question) -->
     <section id="welcome" class="page">
       <div class="card">
         <h2>Welcome to Your Self-Discovery Journey</h2>
         <p>
-          Entrepreneurship isn’t one-size-fits-all. Let’s tailor this to your stage before you begin the quiz.
+          Entrepreneurship isn’t one-size-fits-all. Tell us a little about where you are now so we can tailor the quiz to your stage.
         </p>
 
         <h3>Quick Question: Which best describes your current stage?</h3>
         <div id="backgroundOptions" class="options"></div>
+
         <button id="startQuizBtn" class="primary lg" style="margin-top:20px; display:none;" onclick="startQuiz()">Start Quiz</button>
       </div>
     </section>
@@ -59,8 +99,10 @@
           </div>
           <div id="progressText" class="progress-text">Question 1 of 15</div>
         </div>
+
         <h3 id="questionText" class="question">Loading…</h3>
         <div id="options" class="options"></div>
+
         <div class="quiz-nav">
           <button id="backBtn" class="ghost" onclick="prevQ()">Back</button>
           <button id="nextBtn" class="primary" onclick="nextQ()">Next</button>
@@ -92,12 +134,15 @@
         </div>
       </div>
     </section>
+
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer">
     <div>© <span id="year"></span> Entrepreneur Path Finder</div>
   </footer>
 
+  <!-- Scripts -->
   <script src="script.js"></script>
 </body>
 </html>
