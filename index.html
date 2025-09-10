@@ -18,55 +18,22 @@
   </header>
 
   <main>
+    <!-- Landing Section -->
     <section id="landing" class="page active">
       <div class="hero">
         <div class="hero-copy">
           <h1>Discover Your True Entrepreneurial Self</h1>
           <p class="lead">
-            Not sure where to begin? This journey helps you discover, rediscover,
-            or validate your entrepreneurial identity—then turns it into an actionable plan.
+            This journey helps you discover or validate your entrepreneurial identity—then turns it into an actionable plan.
           </p>
           <div class="hero-cta">
             <button class="primary lg" onclick="goTo('welcome')">Begin Journey</button>
           </div>
-          <div class="hero-points">
-            <div class="point">🔎 Self-Discovery Quiz (20 Qs)</div>
-            <div class="point">🧭 Personalized Archetype Profile</div>
-            <div class="point">🗺️ 6-Month Execution Roadmap</div>
-          </div>
         </div>
         <div class="hero-gallery">
-          <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1200&auto=format&fit=crop" alt="Startup teamwork" />
-          <img src="https://images.unsplash.com/photo-1529336953121-ad5a0d43d0f1?q=80&w=1200&auto=format&fit=crop" alt="Pitch and vision" />
-          <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop" alt="Focused builder" />
+          <img src="https://imgur.com/up79xiM.png" alt="Landing visual" />
         </div>
       </div>
-
-      <section class="how-it-works">
-        <h2>How It Works</h2>
-        <div class="steps">
-          <div class="step">
-            <div class="step-num">1</div>
-            <h3>Take the Quiz</h3>
-            <p>Answer 20 thoughtfully designed questions covering mindset, skills, risk appetite, and lifestyle preferences.</p>
-          </div>
-          <div class="step">
-            <div class="step-num">2</div>
-            <h3>Meet Your Archetype</h3>
-            <p>Get a personalized profile read: strengths, blind spots, and how you naturally create value.</p>
-          </div>
-          <div class="step">
-            <div class="step-num">3</div>
-            <h3>Choose a Path</h3>
-            <p>Explore startup/career options aligned to your archetype and select your best-fit pathway.</p>
-          </div>
-          <div class="step">
-            <div class="step-num">4</div>
-            <h3>Execute the Roadmap</h3>
-            <p>Receive a clear, motivating 6-month action plan with milestones, learning goals, and success metrics.</p>
-          </div>
-        </div>
-      </section>
     </section>
 
     <!-- Welcome Page -->
@@ -74,14 +41,12 @@
       <div class="card">
         <h2>Welcome to Your Self-Discovery Journey</h2>
         <p>
-          Entrepreneurship isn’t one-size-fits-all. In minutes, you’ll uncover your
-          dominant entrepreneurial archetype—<strong>Visionary</strong>, <strong>Builder</strong>, <strong>Hustler</strong>,
-          <strong>Specialist</strong>, or <strong>Investor</strong>—and receive guidance tailored to your style.
+          Entrepreneurship isn’t one-size-fits-all. Let’s tailor this to your stage before you begin the quiz.
         </p>
-        <p>
-          The result is clarity you can act on: what to pursue, how to start, and what to focus on for the next 6 months.
-        </p>
-        <button class="primary lg" onclick="startQuiz()">Start the 20-Question Quiz</button>
+
+        <h3>Quick Question: Which best describes your current stage?</h3>
+        <div id="backgroundOptions" class="options"></div>
+        <button id="startQuizBtn" class="primary lg" style="margin-top:20px; display:none;" onclick="startQuiz()">Start Quiz</button>
       </div>
     </section>
 
@@ -92,7 +57,7 @@
           <div class="progress-wrap">
             <div id="progressBar" class="progress"></div>
           </div>
-          <div id="progressText" class="progress-text">Question 1 of 20</div>
+          <div id="progressText" class="progress-text">Question 1 of 15</div>
         </div>
         <h3 id="questionText" class="question">Loading…</h3>
         <div id="options" class="options"></div>
@@ -130,7 +95,7 @@
   </main>
 
   <footer class="site-footer">
-    <div>© <span id="year"></span> Entrepreneur Path Finder • Built for clarity & action</div>
+    <div>© <span id="year"></span> Entrepreneur Path Finder</div>
   </footer>
 
   <script src="script.js"></script>
